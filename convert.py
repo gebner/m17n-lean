@@ -24,11 +24,10 @@ Example: \\nat \\to \\com
 ''')
 
 for k, v in sorted(t.items(), key = lambda i: i[0]):
-    if len(v) == 1:
-        k = '\\' + k
-        k = k.replace('\\', '\\\\')
-        k = k.replace('"', '\\"')
-        out.write('  ("{0}" ?\\{1})\n'.format(k, v))
+    k = '\\' + k
+    k = k.replace('\\', '\\\\')
+    k = k.replace('"', '\\"')
+    out.write('  ("{0}" "{1}")\n'.format(k, v))
 
 out.write(r'''
 ))
