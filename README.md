@@ -10,5 +10,6 @@ install -Dm0644 lean.mim ~/.m17n.d/lean.mim
 
 Or alternatively:
 ```shell
-mkdir -p ~/.m17n.d; curl https://raw.githubusercontent.com/gebner/m17n-lean/master/lean.mim >~/.m17n.d/lean.mim
+mkdir -p ~/.m17n.d
+curl https://raw.githubusercontent.com/gebner/m17n-lean/master/lean.mim >~/.m17n.d/lean.mim
 ```
