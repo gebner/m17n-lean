@@ -2,7 +2,7 @@
 
 import json
 
-t = json.load(open('translations.json'))
+t = json.load(open('abbreviations.json'))
 
 out = open('lean.mim', 'w')
 
@@ -24,6 +24,7 @@ Example: \\nat \\to \\com
 ''')
 
 for k, v in sorted(t.items(), key = lambda i: i[0]):
+    if '$CURSOR' in v: continue
     k = '\\' + k
     k = k.replace('\\', '\\\\')
     k = k.replace('"', '\\"')
