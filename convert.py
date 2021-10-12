@@ -25,6 +25,7 @@ Example: \\nat \\to \\com
 
 for k, v in sorted(t.items(), key = lambda i: i[0]):
     if '$CURSOR' in v: continue
+    if k == '\\': continue
     k = '\\' + k
     k = k.replace('\\', '\\\\')
     k = k.replace('"', '\\"')
