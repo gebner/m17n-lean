@@ -13,3 +13,9 @@ Or alternatively:
 mkdir -p ~/.m17n.d
 curl https://raw.githubusercontent.com/gebner/m17n-lean/master/lean.mim >~/.m17n.d/lean.mim
 ```
+
+If m17n does not pick up the file,
+you might need to run the following:
+```shell
+echo '(input-method t lean "lean.mim")' >~/.m17n.d/mdb.dir
+```
